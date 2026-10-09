@@ -1,0 +1,5 @@
+interface:
+  display_name: "Comment Guidelines"
+  short_description: "Write concise, durable code comments and docstrings"
+  default_prompt: "Use $comment-guidelines to improve the comments and docstrings in this code without changing behavior; default to Chinese and remind me that English is available."
+
