@@ -96,3 +96,38 @@ The skill should not be selected solely for these requests:
 - A TODO without concrete missing work should not be introduced.
 - Existing comments should not be translated merely to force language uniformity.
 
+## Provenance and lifecycle
+
+Request:
+
+```text
+使用 $comment-guidelines 为这个受监管的结算阈值和临时兼容方案补充注释。
+```
+
+Expected behavior:
+
+- Records the known regulation, requirement, benchmark, or upstream issue rather than inventing a source.
+- Explains the threshold's unit and derivation when that information is available.
+- Uses the appropriate marker instead of labeling every issue as TODO.
+- Includes a tracking reference and removal condition for a temporary workaround when known.
+
+## Module and algorithm documentation
+
+Request:
+
+```text
+使用 $comment-guidelines 为这个一致性哈希模块和核心算法添加必要注释。
+```
+
+Expected behavior:
+
+- Adds a module comment only when the module has a meaningful architectural responsibility.
+- Describes the module boundary, important invariants, and relevant design references.
+- Summarizes non-obvious algorithm stages and relevant complexity without narrating each line.
+
+## Conditional references
+
+- Cross-team ownership or deprecation work should load `references/advanced-cases.md`.
+- Language-specific public API documentation should load only the relevant section of `references/language-conventions.md`.
+- Ordinary comment edits should not load either reference unnecessarily.
+

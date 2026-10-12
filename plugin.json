@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "comment-guidelines",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Maintainable code-comment and docstring guidance with Chinese as the default language and English available on request.",
   "license": "MIT",
   "keywords": [

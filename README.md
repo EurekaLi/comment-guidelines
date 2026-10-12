@@ -8,6 +8,9 @@
 - 默认使用中文编写新增或大幅改写的注释和 docstring，并在修改前提醒用户可选择英文。
 - 用户明确指定的语言优先，其次遵循仓库明确规定的语言；两者都未指定时才默认中文。
 - 尊重仓库已有的 docstring 格式、术语、结构和注释密度。
+- 为业务规则、架构决策、性能数据和上游缺陷保留可追溯依据。
+- 区分 `TODO`、`FIXME`、`HACK`、`NOTE`、`WARNING` 与 `REVIEW`，并记录临时方案的移除条件。
+- 对承担架构职责的模块和真正复杂的算法提供必要的边界、阶段与复杂度说明。
 - 注释专项任务不修改运行行为、公共接口或无关格式。
 - 评审时只报告可操作的问题，不因代码缺少无必要的注释而制造问题。
 
@@ -73,8 +76,11 @@ comment-guidelines/
 ├── skills/
 │   └── comment-guidelines/
 │       ├── SKILL.md
-│       └── agents/
-│           └── openai.yaml
+│       ├── agents/
+│       │   └── openai.yaml
+│       └── references/
+│           ├── advanced-cases.md
+│           └── language-conventions.md
 └── tests/
     └── cases.md
 ```
@@ -94,7 +100,12 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_valid
 
 ## 发布版本
 
-本项目使用语义化版本号。首次公开版本建议标记为 `v0.1.0`；当行为稳定并完成真实项目验证后，再发布 `v1.0.0`。
+本项目使用语义化版本号。本次新增可追溯依据、标记生命周期和按需语言参考，版本更新为 `v0.2.0`；当行为稳定并完成真实项目验证后，再发布 `v1.0.0`。
+
+## 参考来源
+
+- [OpenAI Docs：Build skills](https://developers.openai.com/plugins/build/skills)
+- [代码注释规范：从“写什么”到“怎么写”的完整指南](https://kb.hugogu.cn/wiki/tech/guidance/comments)
 
 ## License
 

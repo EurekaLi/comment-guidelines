@@ -33,13 +33,31 @@ Add comments or docstrings for:
 
 Explain why the code is shaped this way and what must remain true. Let names, types, and straightforward control flow explain what the code does.
 
+## Preserve Provenance And Lifecycle
+
+- When a comment depends on a business rule, regulation, architecture decision, benchmark, paper, or upstream defect, cite the most stable available requirement, document, ticket, issue, or decision record.
+- For non-obvious constants and thresholds, record the unit and the reason or derivation, such as a protocol limit, measured profile, or empirical boundary. Do not invent supporting evidence.
+- Use repository-defined marker conventions when available. Otherwise use conventional meanings: `TODO` for missing work, `FIXME` for a known defect, `HACK` for a necessary workaround, `NOTE` for important context, `WARNING` for a concrete risk, and `REVIEW` for a decision that needs confirmation.
+- A `TODO`, `FIXME`, or `HACK` must state the concrete work or defect and, when known, its tracking reference and removal condition.
+
+## Document Modules And Complex Algorithms
+
+- Add a module or package comment only when the unit has a meaningful architectural responsibility. Describe its purpose, boundary, key relationships, important invariants, and relevant design references rather than adding a generic file header.
+- For a genuinely complex algorithm, comments may summarize its stages, correctness constraints, and relevant time or space complexity. Do not narrate straightforward control flow.
+
 ## Avoid Noise
 
 - Do not narrate assignments, obvious branches, imports, or one-line operations.
 - Do not duplicate type hints, function names, or implementation details in docstrings.
 - Do not add comments to every line or section merely to satisfy a comment quota.
 - Do not preserve dead code as comments; rely on version control.
-- Do not add speculative TODOs. A TODO must state the concrete missing work and, when available, its issue reference or removal condition.
+- Do not add speculative marker comments or invent a private marker syntax that the repository does not recognize.
+
+## Load Supporting Guidance When Needed
+
+- For cross-team ownership, deprecation and migration, complex regular expressions, standard tags, or long comment formatting, read [references/advanced-cases.md](references/advanced-cases.md).
+- For Java/Kotlin, Python, JavaScript/TypeScript, or Go documentation conventions, read [references/language-conventions.md](references/language-conventions.md).
+- Load only the reference relevant to the current task.
 
 ## Respect The Requested Mode
 
