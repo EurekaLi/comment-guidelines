@@ -22,10 +22,10 @@
 
 ```text
 使用 $skill-installer 安装：
-https://github.com/<owner>/comment-guidelines/tree/main/skills/comment-guidelines
+https://github.com/EurekaLi/comment-guidelines/tree/main/skills/comment-guidelines
 ```
 
-把 `<owner>` 替换为 GitHub 用户名或组织名。安装完成后，在下一轮对话中即可使用。
+安装完成后，在下一轮对话中即可使用。
 
 ### 手动安装
 
