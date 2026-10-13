@@ -32,7 +32,7 @@ https://github.com/EurekaLi/comment-guidelines/tree/main/skills/comment-guidelin
 Windows PowerShell：
 
 ```powershell
-git clone https://github.com/<owner>/comment-guidelines.git
+git clone https://github.com/EurekaLi/comment-guidelines.git
 Copy-Item -Recurse -Force `
   ".\comment-guidelines\skills\comment-guidelines" `
   "$env:USERPROFILE\.codex\skills\comment-guidelines"
@@ -41,7 +41,7 @@ Copy-Item -Recurse -Force `
 macOS 或 Linux：
 
 ```bash
-git clone https://github.com/<owner>/comment-guidelines.git
+git clone https://github.com/EurekaLi/comment-guidelines.git
 cp -R ./comment-guidelines/skills/comment-guidelines \
   ~/.codex/skills/comment-guidelines
 ```
